@@ -1,0 +1,13 @@
+version: 2
+mergeable:
+  - when: pull_request.*, pull_request_review.*
+    validate:
+      - do: title
+        must_exclude:
+          regex: ^\[WIP\]
+      - do: description
+        must_include:
+          regex: '\[x\] この pull request はマージ可能な状態です'
+      - do: approvals
+        min:
+          count: 1
