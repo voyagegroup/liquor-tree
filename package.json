@@ -10,6 +10,7 @@
     "build": "cross-env NODE_ENV=production rollup -c rollup.config.js",
     "storybook": "start-storybook -p 9001 -c ./docs/storybook -s ./docs/storybook/public"
   },
+  "main": "src/main.js",
   "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-alias": "^2.2.0",
