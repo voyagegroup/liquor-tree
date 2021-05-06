@@ -33,7 +33,7 @@ function focusdDown(tree, node) {
     return
   }
 
-  if (nextNode.disabled() || prevNode.hidden()) {
+  if (nextNode.disabled() || nextNode.hidden()) {
     return focusdDown(tree, nextNode)
   }
 
