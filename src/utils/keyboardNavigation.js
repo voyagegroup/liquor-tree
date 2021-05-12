@@ -12,35 +12,35 @@ const keyCodes = {
 
 const codesArr = [37, 38, 39, 40, 32]
 
-function focusUp (tree, node) {
+function focusUp(tree, node) {
   const prevNode = tree.prevVisibleNode(node)
 
   if (!prevNode) {
     return
   }
 
-  if (prevNode.disabled()) {
+  if (prevNode.disabled() || prevNode.hidden()) {
     return focusUp(tree, prevNode)
   }
 
   prevNode.focus()
 }
 
-function focusdDown (tree, node) {
+function focusdDown(tree, node) {
   const nextNode = tree.nextVisibleNode(node)
 
   if (!nextNode) {
     return
   }
 
-  if (nextNode.disabled()) {
+  if (nextNode.disabled() || nextNode.hidden()) {
     return focusdDown(tree, nextNode)
   }
 
   nextNode.focus()
 }
 
-function checkNode (tree, node) {
+function checkNode(tree, node) {
   if (!tree.options.checkbox) {
     return
   }
@@ -52,7 +52,7 @@ function checkNode (tree, node) {
   }
 }
 
-function leftArrow (tree, node) {
+function leftArrow(tree, node) {
   if (node.expanded()) {
     node.collapse()
   } else {
@@ -64,7 +64,7 @@ function leftArrow (tree, node) {
   }
 }
 
-function rightArrow (tree, node) {
+function rightArrow(tree, node) {
   if (node.collapsed()) {
     node.expand()
   } else {
@@ -76,7 +76,7 @@ function rightArrow (tree, node) {
   }
 }
 
-function deleteNode (tree, node) {
+function deleteNode(tree, node) {
   const deletion = tree.options.deletion
 
   if (deletion) {

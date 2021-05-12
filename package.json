@@ -1,5 +1,5 @@
 {
-  "name": "liquor-tree",
+  "name": "vls-liquor-tree",
   "description": "A Vue.js tree component.",
   "version": "0.2.70",
   "author": "Kostiantyn <phlyze@gmail.com>",
@@ -10,12 +10,7 @@
     "build": "cross-env NODE_ENV=production rollup -c rollup.config.js",
     "storybook": "start-storybook -p 9001 -c ./docs/storybook -s ./docs/storybook/public"
   },
-  "main": "dist/liquor-tree.umd.js",
-  "module": "dist/liquor-tree.esm.js",
-  "files": [
-    "src",
-    "dist/*.js"
-  ],
+  "main": "src/main.js",
   "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-alias": "^2.2.0",
