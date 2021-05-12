@@ -14,7 +14,7 @@
   "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-alias": "^2.2.0",
-    "@storybook/addon-notes": "^5.2.8",
+    "@storybook/addon-notes": "^5.3.21",
     "@storybook/addon-options": "^5.2.8",
     "@storybook/vue": "^5.2.8",
     "@vue/cli-plugin-babel": "^4.1.1",
